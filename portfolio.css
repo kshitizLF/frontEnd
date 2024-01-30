@@ -1,10 +1,11 @@
 *{
     background-color: rgb(180, 180, 180);
+    box-sizing: border-box;
 }
 .nav{
     background-color: rgb(45, 68, 240);
     width: 70%;
-    height: 50px;
+    min-height: 50px;
     border-radius: 5px;
 
     display: flex;
@@ -24,7 +25,7 @@
     border-radius: 5px;
     
     flex-grow: 1;
-    max-width: 120px;
+    /* max-width: 120px; */
     text-align: center;
 
 } 
@@ -110,4 +111,37 @@ a{
     text-decoration: none;
     color: aliceblue;
     background-color: cornflowerblue;
+}
+
+@media only screen and (max-width:600px){
+    .nav{
+        flex-direction: column;
+        gap: 4px;
+    }
+    .nav > div{
+        width: 100%;
+        
+    }
+    #education{
+        flex-direction: column;
+        padding: 5px;
+    }
+    #education > div{
+        max-width: 70%;
+        width: 70%;
+        /* text-align: center; */
+        justify-content: center;
+        margin: auto;
+        
+    }
+    #contact{
+        flex-direction: column;
+        gap: 5px;
+        padding: 5px 5px;
+    }
+    #contact > div{
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
 }
